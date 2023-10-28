@@ -20,7 +20,7 @@ export const App = () => {
           setLoading(true);
           const gallery = await fetchImages(page, query);
           setGalleryItems(prevState => [
-            ...prevState.galleryItems,
+            ...prevState,
             ...gallery.hits,
           ]);
           setTotalPages(Math.ceil(gallery.totalHits / 12));

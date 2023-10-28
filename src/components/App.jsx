@@ -14,6 +14,7 @@ export const App = () => {
   const [totalPages, setTotalPages] = useState(0);
 
   useEffect(() => {
+    if (!query) return;
       async function addImages() {
         try {
           setLoading(true);
@@ -32,7 +33,7 @@ export const App = () => {
       }
   
       addImages();
-  }, [query,page]);
+  },[query,page]);
 
   const handleSearchSubmit = query => {
     setQuery(query);

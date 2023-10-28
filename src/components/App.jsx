@@ -32,7 +32,7 @@ export const App = () => {
       }
   
       addImages();
-  }, []);
+  }, [query,page]);
 
   const handleSearchSubmit = query => {
     setQuery(query);
